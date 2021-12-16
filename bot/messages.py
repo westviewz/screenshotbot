@@ -9,7 +9,7 @@ class Messages:
         "😟 Sorry! process failed due to timeout. Your process was "
         "taking too long to complete, hence cancelled."
     )
-    TRACK_USER_ACTIVITY = "User id: `{chat_id}`"
+    TRACK_USER_ACTIVITY = "👥 User id: `{chat_id}`"
     PROCESSING_REQUEST = "Processing your request, Please wait! 😴"
     SCREENSHOT_AT = "ScreenShot at {time}"
     SCREENSHOT_PROCESS_FAILED = "😟 Sorry! Screenshot generation failed possibly due to some infrastructure failure 😥."
@@ -24,7 +24,7 @@ class Messages:
     )
     WRONG_FORMAT = "Please follow the specified format"
     VIDEO_PROCESS_CAPTION = "Sample video. {duration}s from {start}"
-    SCREENSHOTS_START = "😀 Generating screenshots!."
+    SCREENSHOTS_START = "😀 Generating screenshots of Given Media!."
 
     SAMPLE_VIDEO_PROCESS_START = "😀 Generating Sample Video! This might take some time."
     SAMPLE_VIDEO_PROCESS_FAILED = "😟 Sorry! Sample video generation failed possibly due to some infrastructure failure 😥."
