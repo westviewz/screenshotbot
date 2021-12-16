@@ -14,7 +14,7 @@ BUTTONS = [[
 ABOUT_TEXT = """
 ╭────[🔅Sᴄʀᴇᴇɴsʜᴏᴛ Bᴏᴛ🔅]───⍟
 │
-├<b>🤖 Bot Name : <a href='https://t.me/TeleRoid_Screenshot_Bot'>Rename X2 Bot</a></b>
+├<b>🤖 Bot Name : <a href='https://t.me/TeleRoid_Screenshot_Bot'>@TeleRoid_Screenshot_Bot</a></b>
 │
 ├<b>📢 Channel : <a href='https://t.me/TeleRoidGroup'>@TeleRoidGroup</a></b>
 │
@@ -22,7 +22,7 @@ ABOUT_TEXT = """
 │
 ├<b>👥 Version : <a href='https://t.me/TeleRoid_Screenshot_Bot'>0.9.2 beta</a></b>
 │
-├<b>🛠 Source : <a href='https://github.com/PredatorHackerzZ/Renamer-bot'>Click Here</a></b>
+├<b>🛠 Source : <a href='https://github.com/PredatorHackerzZ'>Click Here</a></b>
 │
 ├<b>🌐 Server : <a href='https://heroku.com'>Heroku</a></b>
 │
@@ -34,9 +34,9 @@ ABOUT_TEXT = """
 │
 ├<b>🚸 Powered By : <a href='https://t.me/Moviesflixers_DL'>@HindiWebNetwork</a></b>
 │
-╰──────[Thank Yiu]───⍟
+╰────────[Thank Yiu]───⍟
 
-__If issues persists contact my father.__
+__If issues persists contact my Master.__
 
 {admin_notification}
 """
@@ -61,7 +61,7 @@ async def about_(c, m):
 
 
 @ScreenShotBot.on_callback_query(
-    filters.create(lambda _, __, query: query.data.startswith("help"))
+    filters.create(lambda _, __, query: query.data.startswith("about"))
 )
 async def about_cb(c, m):
     await m.answer()
