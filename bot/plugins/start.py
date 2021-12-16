@@ -21,10 +21,10 @@ async def start(c, m, cb=False):
         InlineKeyboardButton("♂️ Support", url=f"https://t.me/TeleRoid14"),
         InlineKeyboardButton("🔔 Channel", url="https://t.me/TeleRoidGroup")
         ],[
-        InlineKeyboardButton("🚸 Source code 🚸", url="https://github.com/PredatorHackerzZ")
+        InlineKeyboardButton("🛠 Settings", callback_data="set+settings")
         ],[
         InlineKeyboardButton("♻ Help", callback_data="help"),
-        InlineKeyboardButton("🛠 Settings ", callback_data="set+settings")
+        InlineKeyboardButton("👤 About", callback_data="about")
         ],[
         InlineKeyboardButton("🔐 Close", callback_data="close")
     ]]
