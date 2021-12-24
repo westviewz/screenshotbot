@@ -7,6 +7,9 @@ from ..screenshotbot import ScreenShotBot
 
 @ScreenShotBot.on_message(filters.private & filters.command("start"))
 async def start(c, m, cb=False):
+    forcesub = await ForceSub(c, m, cb=False)
+    if forcesub == 400:
+        return
     owner_id = Config.AUTH_USERS[0]
     username = 'TheTeleRoid'
     mention = '[Pʀᴇᴅ∆ᴛᴏʀ](https://t.me/MoviesFlixers_dL)'
