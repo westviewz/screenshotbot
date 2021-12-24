@@ -2,12 +2,16 @@ from pyrogram import filters
 from pyrogram.types import ForceReply
 
 from bot.screenshotbot import ScreenShotBot
+from screenshotbot.bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_callback_query(
     filters.create(lambda _, __, query: query.data.startswith("mscht"))
 )
 async def _(c, m):
+    forcesub = await ForceSub(c, m)
+    if forcesub == 400:
+        return
     await m.answer()
     dur = m.message.text.markdown.split("\n")[-1]
     await m.message.delete(True)
