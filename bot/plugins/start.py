@@ -3,11 +3,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from bot.config import Config
 from ..screenshotbot import ScreenShotBot
+from screenshotbot.bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_message(filters.private & filters.command("start"))
 async def start(c, m, cb=False):
-    forcesub = await ForceSub(c, m, cb=False)
+    forcesub = await ForceSub(c, m)
     if forcesub == 400:
         return
     owner_id = Config.AUTH_USERS[0]
