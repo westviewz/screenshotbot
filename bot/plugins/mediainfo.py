@@ -11,6 +11,7 @@ from bot.messages import Messages as ms
 from bot.config import Config
 from bot.utils import ProcessTypes
 from bot.processes import ProcessFactory
+from screenshotbot.bot.database.forcesub import ForceSub
 
 
 logger = logging.getLogger(__name__)
@@ -20,6 +21,9 @@ logger = logging.getLogger(__name__)
     filters.create(lambda _, __, query: query.data.startswith("mi"))
 )
 async def _(c, m):
+    forcesub = await ForceSub(c, m)
+    if forcesub == 400:
+        return
     try:
         await m.answer()
     except Exception:
