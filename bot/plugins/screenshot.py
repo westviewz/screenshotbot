@@ -5,12 +5,16 @@ from bot.screenshotbot import ScreenShotBot
 from bot.processes import ProcessFactory
 from bot.messages import Messages as ms
 from bot.config import Config
+from screenshotbot.bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_callback_query(
     filters.create(lambda _, __, query: query.data.startswith("scht"))
 )
 async def _(c, m):
+    forcesub = await ForceSub(c, m)
+    if forcesub == 400:
+        return
     try:
         await m.answer()
     except Exception:
