@@ -3,6 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from bot.screenshotbot import ScreenShotBot
 from bot.config import Config
+from screenshotbot.bot.database.forcesub import ForceSub
 
 
 BUTTONS = [[
@@ -47,7 +48,9 @@ ADMIN_NOTIFICATION_TEXT = (
 
 @ScreenShotBot.on_message(filters.private & filters.command("about"))
 async def about_(c, m):
-
+    forcesub = await ForceSub(c, m,)
+    if forcesub == 400:
+        return
     await m.reply_text(
         text=ABOUT_TEXT.format(
             mention=m.from_user.mention,
