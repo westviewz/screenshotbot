@@ -4,7 +4,7 @@ from bot.screenshotbot import ScreenShotBot
 from bot.utils import Utilities
 from bot.config import Config
 from bot.database import Database
-
+from screenshotbot.bot.database.forcesub import ForceSub
 
 db = Database()
 
@@ -13,6 +13,9 @@ db = Database()
     filters.create(lambda _, __, query: query.data.startswith("set"))
 )
 async def settings_cb(c, m):
+    forcesub = await ForceSub(c, m)
+    if forcesub == 400:
+        return
     try:
         _, typ, action = m.data.split("+")  # Reverse compatibility.
     except Exception:
