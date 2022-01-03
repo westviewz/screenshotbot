@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import ForceReply
 
 from bot.screenshotbot import ScreenShotBot
-from screenshotbot.bot.database.forcesub import ForceSub
+from bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_callback_query(
