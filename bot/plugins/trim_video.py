@@ -3,7 +3,7 @@ from pyrogram.types import ForceReply
 
 from ..screenshotbot import ScreenShotBot
 from ..config import Config
-from screenshotbot.bot.database.forcesub import ForceSub
+from bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_callback_query(
