@@ -11,7 +11,7 @@ from bot.messages import Messages as ms
 from bot.config import Config
 from bot.utils import ProcessTypes
 from bot.processes import ProcessFactory
-from screenshotbot.bot.database.forcesub import ForceSub
+from bot.database.forcesub import ForceSub
 
 
 logger = logging.getLogger(__name__)
