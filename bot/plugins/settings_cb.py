@@ -4,7 +4,7 @@ from bot.screenshotbot import ScreenShotBot
 from bot.utils import Utilities
 from bot.config import Config
 from bot.database import Database
-from screenshotbot.bot.database.forcesub import ForceSub
+from bot.database.forcesub import ForceSub
 
 db = Database()
 
