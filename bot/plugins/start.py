@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from bot.config import Config
 from ..screenshotbot import ScreenShotBot
-from screenshotbot.bot.database.forcesub import ForceSub
+from bot.database.forcesub import ForceSub
 
 
 @ScreenShotBot.on_message(filters.private & filters.command("start"))
