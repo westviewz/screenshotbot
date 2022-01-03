@@ -9,6 +9,7 @@ class Config:
     SESSION_NAME = os.environ.get("SESSION_NAME", ":memory:")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
     DATABASE_URL = os.environ.get("DATABASE_URL")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL")
     AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "").split(" ")]
     MAX_PROCESSES_PER_USER = int(os.environ.get("MAX_PROCESSES_PER_USER", 2))
     MAX_TRIM_DURATION = int(os.environ.get("MAX_TRIM_DURATION", 600))
