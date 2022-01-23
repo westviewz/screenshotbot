@@ -14,7 +14,7 @@ An attempt to implement the screenshot generation of telegram files. Live versio
 
 ## Installation Guide
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/DX-Bots/screenshotbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/westviewz)
 
 ### Prerequisites
 
